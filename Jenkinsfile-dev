@@ -10,7 +10,7 @@ pipeline{
             steps{
                 sh '''
                 cd /home/mohit/trial9
-                pwd  
+                gh pr create -B main -H dev --title "new pr" --body "this is merged from dev"
                   '''
             }
         }
