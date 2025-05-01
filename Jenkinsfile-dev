@@ -1,8 +1,5 @@
 pipeline{
     agent any
-    environment{
-        GH_TOKEN  = credentials('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')
-    }
     stages{
         stage('dev'){
             steps{
