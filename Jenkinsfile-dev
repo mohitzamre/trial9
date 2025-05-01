@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-    GH_TOKEN = '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'
+    GH_TOKEN = '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'
     }
     stages{
         stage('dev'){
