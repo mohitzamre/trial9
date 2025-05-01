@@ -1,1 +1,18 @@
-
+pipeline{
+    agent any
+    stages{
+        stage('dev'){
+            steps{
+                sh 'echo "this is dev brach"'
+            }
+        }
+        stage('create pull request'){
+            steps{
+                sh '''
+                cd /home/mohit/trial9
+                pwd  
+                  '''
+            }
+        }
+    }
+}
