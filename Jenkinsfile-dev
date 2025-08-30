@@ -1,1 +1,21 @@
-
+pipeline{
+    agent any
+    environment{
+    GH_TOKEN = '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'
+    }
+    stages{
+        stage('dev'){
+            steps{
+                sh 'echo "this is dev brach"'
+            }
+        }
+        stage('create pull request'){
+            steps{
+                sh '''
+                cd /home/mohit/trial9
+                gh pr create -B main -H dev --title "new pr" --body "this is merged from dev"
+                  '''
+            }
+        }
+    }
+}
